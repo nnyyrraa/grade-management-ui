@@ -45,7 +45,7 @@ export default function PreviewPage() {
     const exportToExcelAdvanced = () => {
         const headerRow1 = ["Nama Mahasiswa"];
         const headerRow2 = [""];
-        const rows: any[][] = [];
+        const rows: (string | number)[][] = [];
 
         // Siapkan struktur header
         komponenDefault.forEach((komponen, indexKomponen) => {

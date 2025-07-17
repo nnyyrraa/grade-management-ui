@@ -22,14 +22,6 @@ export default function DaftarKelasSection() {
     return () => clearTimeout(handler);
   }, [searchTerm]);
 
-  const getKonfigurasiStatus = (classId: string) => {
-    if (typeof window !== "undefined") {
-        const status = localStorage.getItem(`status-konfigurasi-${classId}`);
-        return status === '"sudah"' ? "Sudah Konfigurasi" : "Belum Konfigurasi";
-    }
-    return "Belum Konfigurasi";
-  };
-
   const [configStatusMap, setConfigStatusMap] = useState<Record<string, string>>({});
   
   const filtered = mockClasses.filter((kelas) => {

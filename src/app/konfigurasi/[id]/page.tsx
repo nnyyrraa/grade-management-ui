@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import { useParams } from "next/navigation";
@@ -139,7 +140,7 @@ export default function KonfigurasiNilaiPage() {
         {/* Navigasi Breadcrumb */}
         <div className="flex justify-end mb-4">
           <div className="text-sm text-gray-500 font-semibold">
-            <a href="/" className="hover:underline hover:text-[#0E4584] text-[#114D91]">Dashboard</a> / Konfigurasi
+            <Link href="/" className="hover:underline hover:text-[#0E4584] text-[#114D91]">Dashboard</Link> / Konfigurasi
           </div>
         </div>
 
