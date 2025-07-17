@@ -95,7 +95,7 @@ export default function PreviewPage() {
 
     const exportToCSV = () => {
         const data = mahasiswa.map((mhs) => {
-            const row: Record<string, any> = { Nama: mhs.nama };
+            const row: Record<string, string | number> = { Nama: mhs.nama };
             komponenDefault.forEach((komponen) => {
             babList.forEach((bab) => {
                 const key = `${komponen}-${bab}`;
@@ -259,7 +259,7 @@ export default function PreviewPage() {
                             const nilaiPerKomponen: Record<string, number[]> = {};
 
                             Object.entries(mhs.nilai || {}).forEach(([key, val]) => {
-                            const [komponen, bab] = key.split("-");
+                            const [komponen] = key.split("-");
                             if (!nilaiPerKomponen[komponen]) nilaiPerKomponen[komponen] = [];
                             nilaiPerKomponen[komponen].push(typeof val === "number" ? val : 0);
                             });
