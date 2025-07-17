@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import { mockClasses } from "@/lib/mockClasses";
 import { mockMahasiswaPerKelas, Mahasiswa } from "@/lib/mockMahasiswa";
-import { Toaster, toast } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 import BulkInput from "./components/BulkInput";
 import InputTable from "./components/InputTable";

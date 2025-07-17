@@ -37,7 +37,7 @@ export default function InputTable({
     const filledField = mahasiswa.reduce((sum, mhs) => {
       return (
         sum +
-        Object.entries(mhs.nilai).filter(([_, v]) => v !== "" && v !== null && v !== undefined).length
+        Object.entries(mhs.nilai).filter(([__, v]) => v !== "" && v !== null && v !== undefined).length
       );
     }, 0);
 

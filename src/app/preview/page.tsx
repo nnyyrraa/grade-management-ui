@@ -54,7 +54,7 @@ export default function PreviewPage() {
             headerRow1.push(...Array(jumlahBab).fill(komponen));
             headerRow2.push(
                 ...babList
-                .map((bab, bIndex) =>
+                .map((bIndex) =>
                     kontribusi[indexKomponen]?.[bIndex] ? `Bab ${bIndex + 1}` : null
                 )
                 .filter(Boolean)
