@@ -66,7 +66,7 @@ export default function PreviewPage() {
 
         // Siapkan isi baris mahasiswa
         mahasiswa.forEach((mhs) => {
-            const row = [mhs.nama];
+            const row: (string | number | null)[] = [mhs.nama];
 
             komponenDefault.forEach((komponen, indexKomponen) => {
             babList.forEach((bab, bIndex) => {
