@@ -53,8 +53,7 @@ export default function PreviewPage() {
             if (jumlahBab > 0) {
             headerRow1.push(...Array(jumlahBab).fill(komponen));
             headerRow2.push(
-                ...babList
-                .map((bIndex) =>
+                ...babList.map((bIndex) =>
                     kontribusi[indexKomponen]?.[bIndex] ? `Bab ${bIndex + 1}` : null
                 )
                 .filter(Boolean)
@@ -89,7 +88,8 @@ export default function PreviewPage() {
 
         const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
         const blob = new Blob([excelBuffer], { type: "application/octet-stream" });
-        const fileName = `DataMahasiswa_${kelas?.name?.replace(/\s+/g, "") || "Kelas"}.xlsx`;
+        const namaKelas = kelas?.name ? kelas.name.replace(/\s+/g, "") : "Kelas";
+        const fileName = `DataMahasiswa_${namaKelas}.xlsx`;
         saveAs(blob, fileName);
     };
 
@@ -111,7 +111,8 @@ export default function PreviewPage() {
         const worksheet = XLSX.utils.json_to_sheet(data);
         const csv = XLSX.utils.sheet_to_csv(worksheet);
         const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-        const fileName = `DataMahasiswa_${kelas?.name?.replace(/\s+/g, "") || "Kelas"}.csv`;
+        const namaKelas = kelas?.name ? kelas.name.replace(/\s+/g, "") : "Kelas";
+        const fileName = `DataMahasiswa_${namaKelas}.xlsx`;
         saveAs(blob, fileName);
     };
 
