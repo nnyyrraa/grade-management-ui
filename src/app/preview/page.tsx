@@ -51,13 +51,14 @@ export default function PreviewPage() {
         komponenDefault.forEach((komponen, indexKomponen) => {
             const jumlahBab = kontribusi[indexKomponen]?.filter(Boolean).length || 0;
             if (jumlahBab > 0) {
-            headerRow1.push(...Array(jumlahBab).fill(komponen));
-            headerRow2.push(
-                ...babList.map((bIndex) =>
+                headerRow1.push(...Array(jumlahBab).fill(komponen));
+                headerRow2.push(
+                ...babList
+                    .map((_, bIndex) =>
                     kontribusi[indexKomponen]?.[bIndex] ? `Bab ${bIndex + 1}` : null
-                )
-                .filter(Boolean)
-            );
+                    )
+                    .filter((v): v is string => v !== null)
+                );
             }
         });
         headerRow1.push("Nilai Akhir");
