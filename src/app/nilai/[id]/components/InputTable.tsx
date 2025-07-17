@@ -64,16 +64,16 @@ export default function InputTable({
   };
 
   const handleNilaiChange = (mIndex: number, key: string, value: string) => {
-    const parsed = value === "" ? "" : parseFloat(value);
+    const parsed = value === "" ? null : parseFloat(value);
 
-    if (value === "") {
+    if (parsed === null) {
       const updated = [...mahasiswa];
-      delete updated[mIndex].nilai[key]; // ✅ Ini menghapus key-nya dari object
+      delete updated[mIndex].nilai[key];
       setMahasiswa(updated);
       return;
     }
 
-    if (parsed < 0 || parsed > 100) {
+    if (typeof parsed === "number" && (parsed < 0 || parsed > 100)) {
       toast.error("Nilai harus berada dalam rentang 0 - 100");
       return;
     }
