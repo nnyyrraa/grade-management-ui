@@ -85,17 +85,6 @@ export default function KonfigurasiNilaiPage() {
   // Track perubahan persentase untuk warning sebelum keluar
   useEffect(() => {
     const saved = localStorage.getItem(`persentase-${id}`);
-    let savedPersen: number[] = [];
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed)) {
-          savedPersen = parsed;
-        }
-      } catch (e) {
-        console.error("Gagal parse savedPersen:", e);
-      }
-    }
 
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       if (!isSaved) {
