@@ -47,14 +47,16 @@ export default function BulkInput({ babList, komponenList, kontribusi, mahasiswa
                               return;
                             }
 
-                            const updated = mahasiswa.map((m) => ({
-                              ...m,
-                              nilai: {
-                                ...m.nilai,
-                                [`${komponen}-${bab}`]: isNaN(val) ? "" : val,
-                              },
-                            }));
-                            setMahasiswa(updated);
+                            if (!isNaN(val)) {
+                              const updated = mahasiswa.map((m) => ({
+                                ...m,
+                                nilai: {
+                                  ...m.nilai,
+                                  [`${komponen}-${bab}`]: val,
+                                },
+                              }));
+                              setMahasiswa(updated);
+                            }
                           }}
                         />
                       </td>
