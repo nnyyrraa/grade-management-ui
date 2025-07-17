@@ -1,4 +1,5 @@
 import { toast } from "react-hot-toast";
+import { Mahasiswa } from "@/lib/mockMahasiswa";
 
 type Props = {
   babList: string[];
