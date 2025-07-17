@@ -84,10 +84,7 @@ export default function KonfigurasiNilaiPage() {
 
   // Track perubahan persentase untuk warning sebelum keluar
   useEffect(() => {
-<<<<<<< HEAD
-=======
     const saved = localStorage.getItem(`persentase-${id}`);
->>>>>>> 51c7e691aac5eb9563fbe4dd34d45ea464041069
 
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       if (!isSaved) {
