@@ -11,6 +11,11 @@ A tool for lecturers to manage class grading components and student scores with 
 - View list of classes
 - Check which classes have configured grading
 
+![Dashboard Preview](docs/screenshot-dashboard.png)
+![Daftar Kelas Preview](docs/screenshot-daftar-kelas.png)
+
+---
+
 ## ⚙️ 2. Konfigurasi Nilai
 
 - Set grading components (e.g., Tugas, UTS, UAS)
@@ -18,6 +23,9 @@ A tool for lecturers to manage class grading components and student scores with 
 - Choose contributing chapters per component
 
 > 💾 Click "Simpan Konfigurasi" to apply
+
+![Konfigurasi Nilai](docs/screenshot-configuration.png)
+![Kontribusi Bab dan Simulasi Preview](docs/screenshot-kontribusibab-simulasinilai.png)
 
 ---
 
@@ -28,6 +36,9 @@ A tool for lecturers to manage class grading components and student scores with 
 - Real-time auto-save to local storage
 - See progress bar for completion
 
+![Bulk Input Nilai](docs/screenshot-bulkinput-nilai.png)
+![Input Nilai](docs/screenshot-inputnilai.png)
+
 ---
 
 ## 📊 4. Preview Nilai
@@ -37,6 +48,9 @@ A tool for lecturers to manage class grading components and student scores with 
 - Export as `.xlsx` or `.csv` file
 
 > 📁 File will be named `DataMahasiswa_[NamaKelas]`
+
+![Preview Chart Nilai](docs/screenshot-preview-chart.png)
+![Preview Breakdown Nilai](docs/screenshot-preview-breakdownnilai.png)
 
 ---
 

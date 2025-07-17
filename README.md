@@ -18,12 +18,16 @@ A class dashboard application built with **Next.js**, **TypeScript**, **Tailwind
 git clone https://github.com/nnyyrraa/grade-management-ui.git
 cd grade-management-ui
 npm install
+```
 
 ## 🧪 Run Locally
+```bash
 npm run dev
 Then open http://localhost:300 in your browser
+```
 
 ## 📁 Project Structure
+```bash
 grade-management-ui/
 ├── src/
 │   ├── app/                  # App router pages
@@ -38,6 +42,7 @@ grade-management-ui/
 ├── SOLUTION.md               # Design decisions & architecture
 ├── AI-COLLABORATION.md       # AI usage documentation
 ├── USER-GUIDE.md             # Application usage guide
+```
 
 ## ✅ Core Features
 - 🛠️ Grade component configuration
