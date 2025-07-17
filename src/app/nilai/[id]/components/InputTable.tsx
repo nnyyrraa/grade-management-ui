@@ -68,7 +68,7 @@ export default function InputTable({
 
     if (value === "") {
       const updated = [...mahasiswa];
-      updated[mIndex].nilai[key] = "";
+      delete updated[mIndex].nilai[key]; // ✅ Ini menghapus key-nya dari object
       setMahasiswa(updated);
       return;
     }
